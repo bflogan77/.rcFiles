@@ -62,3 +62,4 @@ let g:vimspector_enable_mappings = 'HUMAN'
 packadd! vimspector
 set expandtab
 set tabstop=4
+set shiftwidth=4
