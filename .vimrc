@@ -58,4 +58,7 @@ set number relativenumber
 if filereadable("/etc/vim/vimrc.local")
   source /etc/vim/vimrc.local
 endif
-
+let g:vimspector_enable_mappings = 'HUMAN'
+packadd! vimspector
+set expandtab
+set tabstop=4
