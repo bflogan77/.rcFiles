@@ -52,15 +52,42 @@ endif
 "set incsearch		" Incremental search
 "set autowrite		" Automatically save before commands like :next and :make
 "set hidden		" Hide buffers when they are abandoned
-"set mouse=a		" Enable mouse usage (all modes)
+set mouse=a		" Enable mouse usage (all modes)
 set number relativenumber
 " Source a global configuration file if available
 if filereadable("/etc/vim/vimrc.local")
   source /etc/vim/vimrc.local
 endif
-let g:vimspector_enable_mappings = 'HUMAN'
-packadd! vimspector
+let mapleader=" "
 set expandtab
 set tabstop=4
 set shiftwidth=4
 set autoindent
+inoremap <S-Tab> <C-d>
+
+" window navigation
+nnoremap <leader>j <C-w>j
+nnoremap <leader>k <C-w>k
+nnoremap <leader>l <C-w>l
+nnoremap <leader>h <C-w>h
+
+" tab navigation
+nnoremap <leader><TAB> :tabn<Return>
+nnoremap <leader><S-TAB> :tabp<Return>
+
+" vimspector mappings
+nnoremap <leader>ds :call vimspector#Launch()<Return>
+nnoremap <leader>dq :call vimspector#Stop()<Return>
+nnoremap <leader>dr :call vimspector#Reset()<Return>
+
+nnoremap <leader>c :call vimspector#Continue()<Return>
+nnoremap <leader>db :call vimspector#ToggleBreakpoint()<Return>
+nnoremap <leader>dc :call vimspector#ToggleConditionalBreakpoint()<Return>
+nnoremap <leader>i :call vimspector#StepInto()<Return>
+nnoremap <leader>o :call vimspector#StepOut()<Return>
+nnoremap <leader>n :call vimspector#StepOver()<Return>
+nnoremap <leader>de :call vimspector#Restart()<Return>
+nnoremap <leader>dx :call vimspector#ClearBreakpoints()<Return>
+"nmap <leader>dc  <Plug>VimspectorToggleConditionalBreakpoint()
+
+let g:vimspector_base_dir=expand( '$HOME/.vim/pack/bundle/start/vimspector/' )
