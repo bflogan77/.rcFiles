@@ -88,6 +88,7 @@ nnoremap <leader>o :call vimspector#StepOut()<Return>
 nnoremap <leader>n :call vimspector#StepOver()<Return>
 nnoremap <leader>de :call vimspector#Restart()<Return>
 nnoremap <leader>dx :call vimspector#ClearBreakpoints()<Return>
+nnoremap <leader>p :call vimspector#RunToCursor()<Return>
 "nmap <leader>dc  <Plug>VimspectorToggleConditionalBreakpoint()
 
 let g:vimspector_base_dir=expand( '$HOME/.vim/pack/bundle/start/vimspector/' )
