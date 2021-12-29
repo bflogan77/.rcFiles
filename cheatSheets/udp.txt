@@ -1,0 +1,20 @@
+User Datagram Protocol
+
+Advantages
+    1 faster than TCP
+    2 software controlled packet send rate
+    3 UDP doesnt require a continuous connection
+Disadvantages
+    1 doesn't care if data is received
+    2 can be flexible for software devs due to #2 above
+    3 unstable connections yield bad user experience
+
+Packets
+    Headers
+        -Time to Live (TTL)
+        -Source address
+        -Destination Address
+        -Source Port
+        -Destination Port
+        -Data
+

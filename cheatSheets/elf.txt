@@ -1,0 +1,19 @@
+-program headers: required.  THE source of information used when loading a file.
+    INTERP: defines library to load the ELF
+    LOAD: defines the part of the file to be loaded into memory
+-section headers: not required; kind of used for readability
+    .text: the executable code of teh program
+    .plt and .got: used to resolve and dispatch library calls
+    .data: used for pre-initialized global variables (e.g. global arrays w/ initial data)
+    .rodata: used for gloabl Read-Only data (e.g. string constants)
+    .bss: used for uninitialzied global writable data (e.g. global arrays w/o initial data)
+
+-Interacting w/ ELF's
+    gcc-to make it
+    readelf-to parse the ELF header
+    objdump-to parse ELF header and disassemble source code
+    nm-to view ELF's symbols
+    patchelf-to change some ELF properties
+    objcopy-to swap out elf sections
+    strip-to remove otherwise helpful information (such as symbols)
+    katai-struct to look through elf interactively

@@ -1,0 +1,21 @@
+Connection-based; can be slightly more resource intensive
+lots of headers:
+    1) source port
+    2) destination port
+    3) source IP
+    4) destination IP
+    5) sequence number (random initial seed)
+    6) acknowledgment number (next piece has sequence number+1)
+    7) checksum
+    8) data
+    9) flag
+
+3-Way handshake
+    1 syn-first packet sent by client
+    2 syn/ack-server response
+    3 ack-used by either the acknowledge receipt.
+
+For termination:
+    1 fin
+    2 fin/ack
+    3 ack

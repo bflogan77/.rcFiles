@@ -1,0 +1,20 @@
+Layers:
+1: application-protocols, applications (dhcp, firefox)
+2: presentation-standardization; emails for example.  security features (https). Translator.
+3: session-creates the connection between computers.  After connecting, breaks data into packets
+4: transport-TCP or UDP
+    TCP-Transmission Control Protocal-constant connection, designed for reliability/consistency
+        plus-accurate, synchronization, reliability
+        minus-reliable connection req'd, slow connection can bottleneck, slower than UDP
+    UDP-User Datagram Protocol-no error checking, no snynchornization, no guarantee; 
+        plus-fast, allows application layer control over packet send rate, no continuous connection
+        minus-doesn't care if data received, unstable connection makes it awful
+        mostly used for small amounts of data
+5: Network-responsible for routing the data.
+    -OSPF (open shortest path first)
+    -RIP (routing information protocol)
+    everything is dealt with using IP addresses
+6: data link-receives packet from the network layer, adds MAC (media access control) of receiver
+    Uses NIC (network interface card)
+    responsible for making sure data formatted
+7: physical-cables and devices

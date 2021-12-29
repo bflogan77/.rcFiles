@@ -1,0 +1,12 @@
+-Ports serve to standardize the type of information exchanged between computers
+-Can range from 0-65535
+-"Common Ports" are 0-1024
+-Some good to know ones:
+    -FTP:21
+    -SSH:22
+    -HTTP:80
+    -HTTPS:443
+    -SMB:445
+    -RDP:3389
+
+-These ports can be varied from. you just have to provide a (:) along with the port number to connect when using non-standard numbers.

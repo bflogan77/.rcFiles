@@ -1,0 +1,5 @@
+Dynamic Host Configuration Protocol
+    1. DHCP Discover-request IP Address
+    2. DHCP Offer-DHCP server responds with available IP address
+    3. DHCP Request-device confirms it wants that IP address
+    4. DHCP ACK-server responds acknoledging the IP address is assigned to the device
