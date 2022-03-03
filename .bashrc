@@ -185,5 +185,10 @@ else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
 unset color_prompt force_color_prompt
+alias bashrc='vim ~/.rcFiles/.bashrc && source ~/.rcFiles/.bashrc'
+alias wireless='sudo systemctl restart iwd.service'
+alias wn='nohup play -nq -c 2 synth brownnoise band 1500 3000 &>/dev/null &'
+alias nn='pkill play'
+
 tmux
 
