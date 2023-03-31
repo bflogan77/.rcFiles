@@ -95,7 +95,7 @@ alias l='ls -CF'
 # git aliases
 
 alias gcm='git commit -m'
-alias gp='git push'
+alias gp='cat ~/.githubToken; git push'
 alias ga='git add'
 
 # Add an "alert" alias for long running commands.  Use like so:

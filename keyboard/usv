@@ -5,7 +5,7 @@ xkb_symbols "basic" {
 	key <CAPS> { [ ISO_Level3_Shift ] };
     key.type[Group1] = "FOUR_LEVEL_SEMIALPHABETIC";
 
-    key <TLDE> {	[     grave,	asciitilde, NoSymbol, NoSymbol	]	};
+    key <TLDE> {	[     Escape,	asciitilde, grave, NoSymbol	]	};
     key <AE01> {	[	  1,	exclam, 1, 1 		]	};
     key <AE02> {	[	  2,	at, 2, 2		]	};
     key <AE03> {	[	  3,	numbersign, 3, 3	]	};
@@ -55,6 +55,7 @@ xkb_symbols "basic" {
     key <AB09> {	[    period,	greater, NoSymbol, NoSymbol		]	};
     key <AB10> {	[     slash,	question, NoSymbol, NoSymbol	]	};
 
-    key <BKSL> {	[ backslash,         bar	]	};
-    key <BKSP> {	[ Backspace, Delete, Delete, NoSymbol   ]	};
+    key <BKSL> {	[ backslash,         bar, Delete, Delete	]	};
+    key <BKSP> {	[ Backspace, Backspace, Backspace, Backspace   ]	};
+    key <SPCE> {	[ Space, Space, 0, 0   ]	};
 };
